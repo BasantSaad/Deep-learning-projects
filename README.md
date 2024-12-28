@@ -1,53 +1,130 @@
-~Dataset Columns and Their Descriptions
-The dataset contains 23 entries and 8 columns,
+# Sea Creatures Classification Using Pre-trained MobileNetV2 Model
 
-~Columns and Their Descriptions:
-1.name:
-The common name of the sea animal. This serves as the primary identifier and is used to match the prediction result with the dataset.
-2.animal_type:
-A brief description or category of the sea animal. For example, whether it is a mammal, crustacean, or coral.
-3.Scientific name:
-The formal scientific classification of the animal, which includes its genus and species. This provides an academic reference for the user.
-4.Habitat:
-Information about the environment where the animal is typically found, such as oceans, rivers, reefs, or sand. This helps users understand the ecological niche of the animal.
-5.Physical Characteristics:
-A detailed description of the animal's physical appearance, including size, shape, color, and other distinguishing features.
-6.Behavior:
-An explanation of how the animal interacts with its environment or other creatures. This may include social behavior, feeding habits, or movement patterns.
-7.Fun Facts:
-Interesting trivia or unique information about the animal. This section is designed to make the content more engaging and enjoyable for the user.
-7.end:
-A closing remark or additional comment related to the animal, often written in a friendly tone.
+## 1. Project Overview
+This project focuses on developing a deep learning model to classify images from the **"SeaDataset."** The dataset comprises labeled images of various sea creature categories. The model employs **MobileNetV2**, a pre-trained model on ImageNet, to enhance classification performance and leverage transfer learning techniques.
 
-~Purpose:
-The dataset is a collection of information about various sea animals, covering their common names, scientific classifications, habitats, physical characteristics, behaviors, and fun facts. It provides a concise summary of each animal's unique features and offers interesting trivia to engage readers
+---
 
-~resources:
-I gathered the dataset by extracting information from a chat system, focusing on creating a structured collection of detailed facts about various sea animals. This dataset will be integrated into a web-based user interface
+## 2. Introduction
+The goal of this project is to build a robust image classification model that can accurately differentiate between various categories of sea creatures. Key features of the project include:
 
-~code overview:
- 
-The accompanying code is a Python program designed to preprocess and interact with the dataset. It standardizes the names of animals in the dataset for easier searching, allowing users to query information about a specific animal by its name. The search functionality retrieves comprehensive details about the animal, including its type, scientific name, habitat, and fun facts, or notifies the user if no match is found,This combination of dataset and code offers a user-friendly way to explore educational and engaging details about sea animals.
+- Utilizing **MobileNetV2** for feature extraction.
+- Addressing challenges such as **class imbalance** and **overfitting**.
+- Employing data preprocessing, augmentation, and class weighting to ensure effective training.
 
-~Data Retrieval Using the Code:
-The predicted name is passed to the search_animal function.
-The function searches the dataset for the matching name.
-If a match is found, it retrieves and formats the animal's information.
+This approach demonstrates the power of transfer learning, providing better alignment with the dataset characteristics and yielding insights into model optimization.
 
-~Result Display:
-The application displays detailed information about the predicted animal, 
-including:
-Its category (type)
-Scientific name
-Habitat
-Physical characteristics
-Behavior
-Fun facts
-A friendly closing remark
+---
 
-Benefits of the Code:
-1.Scalability: Can be applied to larger datasets with similar structures.
-2.Case-Insensitive Search: Ensures user input does not need to be exact (e.g., "whale" vs "Whale").
-3.User-Friendly Output: Returns information in a clear, structured format.
-This combination of dataset and code offers a user-friendly way to explore educational and engaging details about sea animals.
+## 3. Objectives
+1. Develop an image detection model capable of accurately categorizing images into predefined classes.
+2. Handle data imbalance using augmentation techniques and class weighting.
+3. Visualize and evaluate the model's performance on training, validation, and test datasets.
+4. Demonstrate predictions on unseen test data to validate model robustness.
+
+---
+
+## 4. Dataset
+- **Name:** SeaDataset  
+- **Path:** `SeaDataset/SeaDataset/`  
+- **Structure:** Organized into subdirectories, where each directory corresponds to a class.  
+
+**Preprocessing Steps:**
+- Images resized to **224x224 pixels** to match MobileNetV2 input requirements.
+- Labels extracted as integers from folder names.
+
+---
+
+## 5. Methodology
+
+### 5.1 Data Preparation
+- **Loading:** The dataset is loaded using TensorFlow’s `image_dataset_from_directory` function.  
+- **Shuffling and Splitting:**
+  - Training Set: **70%** of the dataset.
+  - Validation Set: **20%** of the dataset.
+  - Test Set: **10%** of the dataset.
+- **Data Augmentation:** Applied augmentations include random flipping, rotation, zooming, and translation to improve generalization.
+
+### 5.2 Class Balancing
+- Class weights computed and applied during training.
+- Class distributions visualized for better understanding of imbalance.
+
+### 5.3 Transfer Learning
+- **Base Model:** MobileNetV2 pre-trained on ImageNet.
+- **Fine-tuning:**
+  - First 110 layers frozen to retain pre-trained features.
+  - Remaining layers fine-tuned for the custom dataset.
+
+### 5.4 Model Architecture
+- **Input Layer:** Accepts `224x224x3` images.
+- **Feature Extractor:** MobileNetV2 (excluding the top layer).
+- **Pooling Layer:** Global average pooling.
+- **Output Layer:** Fully connected dense layer with softmax activation for multi-class classification.
+
+### 5.5 Training Configuration
+- **Optimizer:** Adam with a learning rate of `1e-5`.
+- **Loss Function:** Sparse Categorical Cross-Entropy.
+- **Metrics:** Accuracy.
+- **Callbacks:**
+  - Early Stopping: Stops training if validation loss stagnates.
+  - TensorBoard: Logs metrics for visualization.
+
+---
+
+## 6. Evaluation
+Model performance is evaluated through:
+1. **Training and Validation Metrics:** Accuracy and loss monitored during training.
+2. **Test Accuracy:** Assessed on the test dataset after training.
+
+### Visualizations:
+- Accuracy and loss curves for training and validation.
+- Class distribution in the dataset.
+- Sample predictions with true and predicted labels displayed alongside images.
+
+---
+
+## 7. Deliverables
+1. A trained MobileNetV2-based image classification model.
+2. A detailed report with performance metrics and model insights.
+3. Plots and visualizations illustrating training progress and test predictions.
+
+---
+
+## 8. Tools and Libraries
+### Python Libraries:
+- TensorFlow
+- NumPy
+- Matplotlib
+- Scikit-learn
+
+### Hardware Requirements:
+- **GPU Acceleration** is recommended for efficient model training.
+
+---
+
+## 9. Expected Results
+1. Accurate classification of images into their respective categories with high test accuracy.
+2. Effective handling of data imbalance using augmentation and class weighting.
+3. Detailed visualizations to understand model behavior.
+
+---
+
+## 10. How to Run the Code
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-repo/sea-creatures-classification.git
+   cd sea-creatures-classification
+
+### 2. Required Libraries
+To run the code, make sure to install the necessary libraries. These libraries are required for the project:
+
+- **NumPy**: For numerical operations and array manipulations.
+- **TensorFlow**: For building, training, and deploying deep learning models.
+- **Matplotlib**: For creating visualizations and plots.
+- **Scikit-learn**: For machine learning utilities like computing class weights.
+
+To install the required libraries, use the following command:
+
+```bash
+pip install numpy tensorflow matplotlib scikit-learn
 
