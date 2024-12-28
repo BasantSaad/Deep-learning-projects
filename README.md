@@ -123,14 +123,9 @@ To run the code, make sure to install the necessary libraries. These libraries a
 - **Matplotlib**: For creating visualizations and plots.
 - **Scikit-learn**: For machine learning utilities like computing class weights.
 
-To install the required libraries, use the following command:
+# Wep application of Sea Creatures 🌊
 
-```bash
-pip install numpy tensorflow matplotlib scikit-learn
-
-Sea Creatures 🌊
-
-Overview
+## Overview
 
 Sea Creatures is a web application built with Streamlit to explore and learn about marine life. The app provides two main features:
 
@@ -140,12 +135,12 @@ Sea Creature Detection: Upload an image to identify the marine creature and retr
 
 ## Deployment
 
-To deploy the application, you can use platforms like Streamlit Sharing, Heroku, or AWS. Below are the steps for deploying with Streamlit Sharing:
+To deploy the application, you can use platforms like **Streamlit** Sharing, Heroku, or AWS. Below are the steps for deploying with Streamlit Sharing:
 
 Streamlit Sharing Deployment
 
 Fork or Clone the Repository:
-
+```bash
 git clone https://github.com/yourusername/sea-creatures.git
 cd sea-creatures
 
@@ -253,5 +248,4 @@ Dataset: sea animals test(1).csv
 Contact
 
 For any questions or suggestions, feel free to open an issue on GitHub or contact the maintainers.
-
 
