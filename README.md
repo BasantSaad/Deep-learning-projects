@@ -141,8 +141,9 @@ Streamlit Sharing Deployment
 
 Fork or Clone the Repository:
 
-git clone https:[//github.com/BasantSaad/Deep-Learning-projects/sea-creatures.git](https://github.com/BasantSaad/Deep-learning-projects/tree/main)
-cd sea-creatures
+git clone https:   ```bash
+   git clone https:[//github.com/your-repo/sea-creatures-classification.git
+   cd sea-creatures-classification](https://github.com/BasantSaad/Deep-learning-projects/tree/main)
 
 ### Push to GitHub:
 Ensure your code is pushed to a GitHub repository.
