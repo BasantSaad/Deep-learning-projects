@@ -112,7 +112,7 @@ Model performance is evaluated through:
 ## 10. How to Run the Code
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-repo/sea-creatures-classification.git
+   git clone https:[//github.com/your-repo/sea-creatures-classification.git](https://github.com/BasantSaad/Deep-learning-projects/tree/main)
    cd sea-creatures-classification
 
 ### 2. Required Libraries
@@ -141,8 +141,7 @@ Streamlit Sharing Deployment
 
 Fork or Clone the Repository:
 
-git clone https:   ```bash
-   git clone https:[//github.com/your-repo/sea-creatures-classification.git
+   git clone https: [//github.com/your-repo/sea-creatures-classification.git
    cd sea-creatures-classification](https://github.com/BasantSaad/Deep-learning-projects/tree/main)
 
 ### Push to GitHub:
