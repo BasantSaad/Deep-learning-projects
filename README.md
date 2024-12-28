@@ -123,7 +123,7 @@ To run the code, make sure to install the necessary libraries. These libraries a
 - **Matplotlib**: For creating visualizations and plots.
 - **Scikit-learn**: For machine learning utilities like computing class weights.
 
-# Wep application of Sea Creatures 🌊
+## Wep application of Sea Creatures 🌊
 
 ## Overview
 
@@ -140,11 +140,11 @@ To deploy the application, you can use platforms like **Streamlit** Sharing, Her
 Streamlit Sharing Deployment
 
 Fork or Clone the Repository:
-```bash
-git clone https://github.com/yourusername/sea-creatures.git
+
+git clone https://github.com/BasantSaad/Deep-Learning-projects/sea-creatures.git
 cd sea-creatures
 
-Push to GitHub:
+### Push to GitHub:
 Ensure your code is pushed to a GitHub repository.
 
 Sign in to Streamlit Sharing:
@@ -161,21 +161,21 @@ Select the repository and branch where your code is located.
 
 Specify the path to app.py.
 
-Deploy:
+**Deploy**:
 
 Click "Deploy" to launch your app.
 
 Once deployed, you will receive a unique URL to share your application.
 
-Notes for Deployment
+**Notes for Deployment**
 
 Ensure the required files (mobilenet_model3.h5, sea animals test(1).csv, etc.) are in the repository.
 
 If the dataset or model files are large, consider hosting them on a cloud storage service (e.g., AWS S3, Google Drive) and modifying the code to download them at runtime.
 
-Features
+### **Features**
 
-Marine Life Encyclopedia
+**Marine Life Encyclopedia**
 
 Displays a collection of marine animal images from a local directory.
 
@@ -183,7 +183,7 @@ Provides detailed information, including habitat, behavior, and fun facts, upon 
 
 Includes a fun quiz feature for interactive learning.
 
-Sea Creature Detection
+**Sea Creature Detection**
 
 Allows users to upload an image for identification.
 
@@ -191,9 +191,9 @@ Utilizes a trained MobileNet model to predict the type of marine creature.
 
 Provides detailed information about the predicted creature, including its scientific name, physical characteristics, and behavior.
 
-How to Use
+**How to Use**
 
-Marine Life Encyclopedia:
+#### **Marine Life Encyclopedia**:
 
 Navigate to the "Marine Life Encyclopedia" page using the sidebar.
 
@@ -201,7 +201,7 @@ Browse the gallery of marine animal images.
 
 Click "See More" to learn detailed information about an animal.
 
-Sea Creature Detection:
+#### **Sea Creature Detection**:
 
 Navigate to the "Detection" page using the sidebar.
 
@@ -209,7 +209,7 @@ Upload an image of a marine animal.
 
 Click "Predict" to identify the animal and display its information.
 
-Dependencies
+**Dependencies**
 
 Streamlit: For building the web application.
 
@@ -223,7 +223,7 @@ Pillow: For working with images.
 
 Refer to requirements.txt for the complete list of dependencies.
 
-Contributing
+**Contributing**
 
 Contributions are welcome! If you'd like to improve this project, please:
 
@@ -233,17 +233,17 @@ Create a new branch for your feature or bugfix.
 
 Submit a pull request with detailed descriptions of your changes.
 
-License
+**License**
 
 This project is licensed under the MIT License.
 
-Acknowledgements
-
+**Acknowledgements**
+The interface, leading and collective all of the code : Basant
 Model and Predictions: Ali
 
 Animal Search Functionality: Mariam
 
-Dataset: sea animals test(1).csv
+**Dataset**: sea animals test(1).csv
 
 Contact
 
